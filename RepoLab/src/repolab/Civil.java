@@ -57,6 +57,11 @@ public class Civil extends Persona{
     public void setMunicipio(String municipio) {
         this.municipio = municipio;
     }
+
+    @Override
+    public String toString() {
+        return super.getNombre();
+    }
     
     
 }

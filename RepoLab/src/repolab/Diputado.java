@@ -28,5 +28,7 @@ public class Diputado extends Candidato{
         this.departamento = departamento;
     }
     
-    
+    public String toString() {
+        return super.getNombre();
+    }
 }

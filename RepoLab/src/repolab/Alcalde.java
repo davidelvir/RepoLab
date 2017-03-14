@@ -28,5 +28,7 @@ public class Alcalde extends Candidato{
     public void setMunicipio(String municipio) {
         this.municipio = municipio;
     }
-    
+    public String toString() {
+        return super.getNombre();
+    }
 }

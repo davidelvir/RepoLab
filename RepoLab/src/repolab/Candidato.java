@@ -37,6 +37,8 @@ public class Candidato extends Persona{
     public void setVotos(int votos) {
         this.votos = votos;
     }
-    
+    public String toString() {
+        return super.getNombre();
+    }
     
 }

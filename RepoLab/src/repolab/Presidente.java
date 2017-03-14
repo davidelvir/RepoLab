@@ -28,5 +28,7 @@ public class Presidente extends Candidato{
         this.movimiento = movimiento;
     }
     
-    
+    public String toString() {
+        return super.getNombre();
+    }
 }
