@@ -7,6 +7,8 @@ package repolab;
 
 import java.util.ArrayList;
 import javax.swing.ComboBoxModel;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JOptionPane;
 import javax.swing.ListModel;
 import javax.swing.MutableComboBoxModel;
 import javax.swing.table.DefaultTableModel;
@@ -107,14 +109,57 @@ public class Main_Tab extends javax.swing.JFrame {
         cb_dipuatdo = new javax.swing.JComboBox<>();
         cb_alcalde = new javax.swing.JComboBox<>();
         cb_presidente = new javax.swing.JComboBox<>();
-        jButton12 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
+        jb_diputado = new javax.swing.JButton();
+        jb_alcalde = new javax.swing.JButton();
+        jb_presidente = new javax.swing.JButton();
+        jd_listar = new javax.swing.JDialog();
+        jTabbedPane3 = new javax.swing.JTabbedPane();
+        jPanel9 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jt_personas = new javax.swing.JTable();
+        jButton16 = new javax.swing.JButton();
+        jPanel10 = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jt_partidos = new javax.swing.JTable();
+        jButton17 = new javax.swing.JButton();
+        jd_votar = new javax.swing.JDialog();
+        jLabel28 = new javax.swing.JLabel();
+        tf_idvoto = new javax.swing.JTextField();
+        jButton18 = new javax.swing.JButton();
         jButton14 = new javax.swing.JButton();
+        jd_votacion = new javax.swing.JDialog();
+        jTabbedPane4 = new javax.swing.JTabbedPane();
+        jPanel11 = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jt_presidente = new javax.swing.JTable();
+        jb_votopresidente = new javax.swing.JButton();
+        jPanel12 = new javax.swing.JPanel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jt_diputado = new javax.swing.JTable();
+        jb_votodiputada = new javax.swing.JButton();
+        jPanel13 = new javax.swing.JPanel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jt_alcalde = new javax.swing.JTable();
+        jb_votoalcalde = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
+        jd_ganador = new javax.swing.JDialog();
+        jTabbedPane5 = new javax.swing.JTabbedPane();
+        jPanel14 = new javax.swing.JPanel();
+        jLabel29 = new javax.swing.JLabel();
+        tf_presidenteganador = new javax.swing.JTextField();
+        jPanel15 = new javax.swing.JPanel();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        jt_ganadoresalcalde = new javax.swing.JTable();
+        jPanel16 = new javax.swing.JPanel();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        jt_ganadordiputado = new javax.swing.JTable();
+        jd_modificar = new javax.swing.JDialog();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
+        jButton15 = new javax.swing.JButton();
 
         jLabel1.setText("Id");
 
@@ -576,24 +621,24 @@ public class Main_Tab extends javax.swing.JFrame {
             }
         });
 
-        jButton12.setText("Agregar");
-        jButton12.addMouseListener(new java.awt.event.MouseAdapter() {
+        jb_diputado.setText("Agregar");
+        jb_diputado.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton12MouseClicked(evt);
+                jb_diputadoMouseClicked(evt);
             }
         });
 
-        jButton13.setText("Agregar");
-        jButton13.addMouseListener(new java.awt.event.MouseAdapter() {
+        jb_alcalde.setText("Agregar");
+        jb_alcalde.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton13MouseClicked(evt);
+                jb_alcaldeMouseClicked(evt);
             }
         });
 
-        jButton14.setText("Agregar");
-        jButton14.addMouseListener(new java.awt.event.MouseAdapter() {
+        jb_presidente.setText("Agregar");
+        jb_presidente.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton14MouseClicked(evt);
+                jb_presidenteMouseClicked(evt);
             }
         });
 
@@ -614,13 +659,13 @@ public class Main_Tab extends javax.swing.JFrame {
                             .addGroup(jd_partidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(cb_dipuatdo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(jButton12))
+                            .addComponent(jb_diputado))
                         .addGap(51, 51, 51)
                         .addGroup(jd_partidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jd_partidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(cb_alcalde, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(jButton13))
+                            .addComponent(jb_alcalde))
                         .addGap(108, 108, 108)
                         .addGroup(jd_partidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jd_partidoLayout.createSequentialGroup()
@@ -629,7 +674,7 @@ public class Main_Tab extends javax.swing.JFrame {
                                     .addComponent(cb_presidente, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel24))
-                            .addComponent(jButton14)))
+                            .addComponent(jb_presidente)))
                     .addGroup(jd_partidoLayout.createSequentialGroup()
                         .addGap(263, 263, 263)
                         .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -655,12 +700,470 @@ public class Main_Tab extends javax.swing.JFrame {
                     .addComponent(cb_presidente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
                 .addGroup(jd_partidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton12)
-                    .addComponent(jButton13)
-                    .addComponent(jButton14))
+                    .addComponent(jb_diputado)
+                    .addComponent(jb_alcalde)
+                    .addComponent(jb_presidente))
                 .addGap(42, 42, 42)
                 .addComponent(jButton11)
                 .addContainerGap(43, Short.MAX_VALUE))
+        );
+
+        jt_personas.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Id", "Nombre", "Edad"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane2.setViewportView(jt_personas);
+
+        jButton16.setText("Regresar");
+        jButton16.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton16MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGap(101, 101, 101)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGap(268, 268, 268)
+                        .addComponent(jButton16)))
+                .addContainerGap(114, Short.MAX_VALUE))
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGap(115, 115, 115)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(82, 82, 82)
+                .addComponent(jButton16)
+                .addContainerGap(91, Short.MAX_VALUE))
+        );
+
+        jTabbedPane3.addTab("Personas", jPanel9);
+
+        jt_partidos.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Nombre"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane3.setViewportView(jt_partidos);
+
+        jButton17.setText("Regresar");
+        jButton17.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton17MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addGap(281, 281, 281)
+                .addComponent(jButton17)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
+                .addContainerGap(109, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(106, 106, 106))
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addContainerGap(126, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(66, 66, 66)
+                .addComponent(jButton17)
+                .addGap(85, 85, 85))
+        );
+
+        jTabbedPane3.addTab("Partidos", jPanel10);
+
+        javax.swing.GroupLayout jd_listarLayout = new javax.swing.GroupLayout(jd_listar.getContentPane());
+        jd_listar.getContentPane().setLayout(jd_listarLayout);
+        jd_listarLayout.setHorizontalGroup(
+            jd_listarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTabbedPane3)
+        );
+        jd_listarLayout.setVerticalGroup(
+            jd_listarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTabbedPane3)
+        );
+
+        jLabel28.setText("Ingrese su ID");
+
+        jButton18.setText("Ingresar a votar");
+        jButton18.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton18MouseClicked(evt);
+            }
+        });
+
+        jButton14.setText("FIN DE LAS VOTACIONES");
+        jButton14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton14MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jd_votarLayout = new javax.swing.GroupLayout(jd_votar.getContentPane());
+        jd_votar.getContentPane().setLayout(jd_votarLayout);
+        jd_votarLayout.setHorizontalGroup(
+            jd_votarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_votarLayout.createSequentialGroup()
+                .addGroup(jd_votarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_votarLayout.createSequentialGroup()
+                        .addGap(123, 123, 123)
+                        .addComponent(jLabel28)
+                        .addGap(18, 18, 18)
+                        .addComponent(tf_idvoto, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jd_votarLayout.createSequentialGroup()
+                        .addGap(242, 242, 242)
+                        .addComponent(jButton18)))
+                .addContainerGap(331, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_votarLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jd_votarLayout.setVerticalGroup(
+            jd_votarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_votarLayout.createSequentialGroup()
+                .addGap(169, 169, 169)
+                .addGroup(jd_votarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel28)
+                    .addComponent(tf_idvoto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29)
+                .addComponent(jButton18)
+                .addGap(18, 18, 18)
+                .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(74, Short.MAX_VALUE))
+        );
+
+        jt_presidente.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Candidato", "Edad"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane4.setViewportView(jt_presidente);
+
+        jb_votopresidente.setText("Votar");
+        jb_votopresidente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_votopresidenteMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGap(72, 72, 72)
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGap(224, 224, 224)
+                        .addComponent(jb_votopresidente)))
+                .addContainerGap(81, Short.MAX_VALUE))
+        );
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGap(83, 83, 83)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
+                .addComponent(jb_votopresidente)
+                .addGap(71, 71, 71))
+        );
+
+        jTabbedPane4.addTab("Presidente", jPanel11);
+
+        jt_diputado.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Candidato", "Edad"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane5.setViewportView(jt_diputado);
+
+        jb_votodiputada.setText("Votar");
+        jb_votodiputada.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_votodiputadaMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
+        jPanel12.setLayout(jPanel12Layout);
+        jPanel12Layout.setHorizontalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addGap(72, 72, 72)
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addGap(259, 259, 259)
+                        .addComponent(jb_votodiputada)))
+                .addContainerGap(81, Short.MAX_VALUE))
+        );
+        jPanel12Layout.setVerticalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addGap(83, 83, 83)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
+                .addComponent(jb_votodiputada)
+                .addGap(71, 71, 71))
+        );
+
+        jTabbedPane4.addTab("Diputado", jPanel12);
+
+        jt_alcalde.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Candidato", "Edad"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane6.setViewportView(jt_alcalde);
+
+        jb_votoalcalde.setText("Votar");
+        jb_votoalcalde.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_votoalcaldeMouseClicked(evt);
+            }
+        });
+
+        jButton12.setText("Enviar Votos");
+        jButton12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton12MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
+        jPanel13.setLayout(jPanel13Layout);
+        jPanel13Layout.setHorizontalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addGap(72, 72, 72)
+                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addGap(202, 202, 202)
+                        .addComponent(jb_votoalcalde)
+                        .addGap(46, 46, 46)
+                        .addComponent(jButton12)))
+                .addContainerGap(81, Short.MAX_VALUE))
+        );
+        jPanel13Layout.setVerticalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addGap(83, 83, 83)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jb_votoalcalde)
+                    .addComponent(jButton12))
+                .addGap(69, 69, 69))
+        );
+
+        jTabbedPane4.addTab("Alcalde", jPanel13);
+
+        javax.swing.GroupLayout jd_votacionLayout = new javax.swing.GroupLayout(jd_votacion.getContentPane());
+        jd_votacion.getContentPane().setLayout(jd_votacionLayout);
+        jd_votacionLayout.setHorizontalGroup(
+            jd_votacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTabbedPane4)
+        );
+        jd_votacionLayout.setVerticalGroup(
+            jd_votacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTabbedPane4)
+        );
+
+        jLabel29.setText("Ganador!!");
+
+        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
+        jPanel14.setLayout(jPanel14Layout);
+        jPanel14Layout.setHorizontalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addGap(103, 103, 103)
+                .addComponent(jLabel29)
+                .addGap(48, 48, 48)
+                .addComponent(tf_presidenteganador, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(289, Short.MAX_VALUE))
+        );
+        jPanel14Layout.setVerticalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addGap(159, 159, 159)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel29)
+                    .addComponent(tf_presidenteganador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(195, Short.MAX_VALUE))
+        );
+
+        jTabbedPane5.addTab("Presidente", jPanel14);
+
+        jt_ganadoresalcalde.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Municipio", "Nombre"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane7.setViewportView(jt_ganadoresalcalde);
+
+        javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
+        jPanel15.setLayout(jPanel15Layout);
+        jPanel15Layout.setHorizontalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addGap(88, 88, 88)
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(104, Short.MAX_VALUE))
+        );
+        jPanel15Layout.setVerticalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addGap(100, 100, 100)
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(180, Short.MAX_VALUE))
+        );
+
+        jTabbedPane5.addTab("Alcalde", jPanel15);
+
+        jt_ganadordiputado.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Municipio", "Nombre"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane8.setViewportView(jt_ganadordiputado);
+
+        javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
+        jPanel16.setLayout(jPanel16Layout);
+        jPanel16Layout.setHorizontalGroup(
+            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel16Layout.createSequentialGroup()
+                .addGap(91, 91, 91)
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(101, Short.MAX_VALUE))
+        );
+        jPanel16Layout.setVerticalGroup(
+            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel16Layout.createSequentialGroup()
+                .addGap(100, 100, 100)
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(172, Short.MAX_VALUE))
+        );
+
+        jTabbedPane5.addTab("Diputado", jPanel16);
+
+        javax.swing.GroupLayout jd_ganadorLayout = new javax.swing.GroupLayout(jd_ganador.getContentPane());
+        jd_ganador.getContentPane().setLayout(jd_ganadorLayout);
+        jd_ganadorLayout.setHorizontalGroup(
+            jd_ganadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTabbedPane5)
+        );
+        jd_ganadorLayout.setVerticalGroup(
+            jd_ganadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTabbedPane5)
+        );
+
+        javax.swing.GroupLayout jd_modificarLayout = new javax.swing.GroupLayout(jd_modificar.getContentPane());
+        jd_modificar.getContentPane().setLayout(jd_modificarLayout);
+        jd_modificarLayout.setHorizontalGroup(
+            jd_modificarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 664, Short.MAX_VALUE)
+        );
+        jd_modificarLayout.setVerticalGroup(
+            jd_modificarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 396, Short.MAX_VALUE)
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -685,13 +1188,30 @@ public class Main_Tab extends javax.swing.JFrame {
         });
 
         jButton3.setText("Iniciar Votaciones");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
 
         jButton8.setText("Modificar Persona");
+        jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton8MouseClicked(evt);
+            }
+        });
 
         jButton9.setText("Eliminar Persona");
         jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton9MouseClicked(evt);
+            }
+        });
+
+        jButton15.setText("Listar Todo");
+        jButton15.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton15MouseClicked(evt);
             }
         });
 
@@ -703,11 +1223,13 @@ public class Main_Tab extends javax.swing.JFrame {
                 .addGap(216, 216, 216)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(265, Short.MAX_VALUE))
+                    .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(357, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -718,11 +1240,13 @@ public class Main_Tab extends javax.swing.JFrame {
                 .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(26, 26, 26)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
+                .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -734,7 +1258,8 @@ public class Main_Tab extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         
-        MutableComboBoxModel modelo = (MutableComboBoxModel)this.cb_partido.getModel();
+        DefaultComboBoxModel modelo = (DefaultComboBoxModel)this.cb_partido.getModel();
+        
         for(Partido tem : partidos){
             modelo.addElement(tem);
         }
@@ -867,9 +1392,9 @@ public class Main_Tab extends javax.swing.JFrame {
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
         // TODO add your handling code here:
-        MutableComboBoxModel modelo1 = (MutableComboBoxModel)this.cb_dipuatdo.getModel();
-        MutableComboBoxModel modelo2 = (MutableComboBoxModel)this.cb_alcalde.getModel();
-        MutableComboBoxModel modelo3 = (MutableComboBoxModel)this.cb_presidente.getModel();
+        DefaultComboBoxModel modelo1 = (DefaultComboBoxModel)this.cb_dipuatdo.getModel();
+        DefaultComboBoxModel modelo2 = (DefaultComboBoxModel)this.cb_alcalde.getModel();
+        DefaultComboBoxModel modelo3 = (DefaultComboBoxModel)this.cb_presidente.getModel();
         for(Persona tem : candidatos){
             if(tem instanceof Diputado){
                 modelo1.addElement(tem);
@@ -896,23 +1421,357 @@ public class Main_Tab extends javax.swing.JFrame {
         diputados.clear();
         alcaldes.clear();
         presidentes.clear();
+        this.tf_nombre_partido.setText("");
         this.jd_partido.setVisible(false);
     }//GEN-LAST:event_jButton11MouseClicked
 
-    private void jButton12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton12MouseClicked
+    private void jb_diputadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_diputadoMouseClicked
         // TODO add your handling code here:
         diputados.add((Diputado)this.cb_dipuatdo.getSelectedItem());
-    }//GEN-LAST:event_jButton12MouseClicked
+    }//GEN-LAST:event_jb_diputadoMouseClicked
 
-    private void jButton13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton13MouseClicked
+    private void jb_alcaldeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_alcaldeMouseClicked
         // TODO add your handling code here:
         alcaldes.add((Alcalde)this.cb_alcalde.getSelectedItem());
-    }//GEN-LAST:event_jButton13MouseClicked
+    }//GEN-LAST:event_jb_alcaldeMouseClicked
+
+    private void jb_presidenteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_presidenteMouseClicked
+        // TODO add your handling code here:
+        presidentes.add((Presidente)this.cb_presidente.getSelectedItem());
+        
+    }//GEN-LAST:event_jb_presidenteMouseClicked
+
+    private void jButton15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton15MouseClicked
+        // TODO add your handling code here:
+        jt_partidos.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Nombre"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jt_personas.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Id", "Nombre", "Edad"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        for(Persona tem : candidatos){
+        Persona s = (Persona) tem;
+           Object[] newrow = {s.getId(),s.getNombre(),s.getEdad()};
+           DefaultTableModel modelo = (DefaultTableModel)jt_personas.getModel();
+           modelo.addRow(newrow);
+           jt_personas.setModel(modelo);
+        }
+        for(Partido t : partidos){
+            Partido p = (Partido) t;
+            Object[] newrow = {p.getNombre()};
+            DefaultTableModel modelo = (DefaultTableModel)jt_partidos.getModel();
+            modelo.addRow(newrow);
+            jt_partidos.setModel(modelo);
+        }
+        this.jd_listar.setModal(true);
+        this.jd_listar.pack();
+        this.jd_listar.setLocationRelativeTo(this);
+        this.jd_listar.setVisible(true);
+    }//GEN-LAST:event_jButton15MouseClicked
+
+    private void jButton17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton17MouseClicked
+        // TODO add your handling code here:
+        jd_listar.setVisible(false);
+    }//GEN-LAST:event_jButton17MouseClicked
+
+    private void jButton16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton16MouseClicked
+        // TODO add your handling code here:
+        jd_listar.setVisible(false);
+    }//GEN-LAST:event_jButton16MouseClicked
+
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+        // TODO add your handling code here:
+        this.jd_votar.setModal(true);
+        this.jd_votar.pack();
+        this.jd_votar.setLocationRelativeTo(this);
+        this.jd_votar.setVisible(true);
+    }//GEN-LAST:event_jButton3MouseClicked
+
+    private void jButton18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton18MouseClicked
+        // TODO add your handling code here:
+        Civil p = new Civil();
+        boolean existe = false;
+        this.jb_votoalcalde.setEnabled(true);
+        this.jb_votodiputada.setEnabled(true);
+        this.jb_votopresidente.setEnabled(true);
+        for(Persona tem : candidatos){
+            if(tem instanceof Civil){
+                if (Integer.parseInt(this.tf_idvoto.getText()) == tem.getId()) {
+                    p = (Civil)tem;
+                    existe = true;
+                    break;
+                }
+            }
+        }
+        if(existe){
+            jt_alcalde.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Candidato", "Edad"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+            jt_diputado.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Candidato", "Edad"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+            jt_presidente.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Candidato", "Edad"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+            for (Persona tem : candidatos) {
+                Persona s = (Persona) tem;
+                if(tem instanceof Presidente){
+                    Object[] newrow = {s.getId(), s.getNombre(), s.getEdad()};
+                    DefaultTableModel modelo = (DefaultTableModel) jt_presidente.getModel();
+                    modelo.addRow(newrow);
+                    jt_presidente.setModel(modelo);
+                }
+                if(tem instanceof Diputado){
+                    if(((Diputado) tem).getDepartamento().equalsIgnoreCase(p.getDepartamento())){
+                        Object[] newrow = {s.getId(), s.getNombre(), s.getEdad()};
+                        DefaultTableModel modelo = (DefaultTableModel) jt_diputado.getModel();
+                        modelo.addRow(newrow);
+                        jt_diputado.setModel(modelo);
+                    }
+                }
+                if(tem instanceof Alcalde){
+                    if(((Alcalde) tem).getMunicipio().equalsIgnoreCase(p.getMunicipio())){
+                        Object[] newrow = {s.getId(), s.getNombre(), s.getEdad()};
+                        DefaultTableModel modelo = (DefaultTableModel) jt_alcalde.getModel();
+                        modelo.addRow(newrow);
+                        jt_alcalde.setModel(modelo);
+                    }
+                }
+            }
+            this.jd_votacion.setModal(true);
+            this.jd_votacion.pack();
+            this.jd_votacion.setLocationRelativeTo(this);
+            this.jd_votacion.setVisible(true);
+        }else{
+            JOptionPane.showMessageDialog(this, "Id no esta en el sistema");
+        }
+    }//GEN-LAST:event_jButton18MouseClicked
+
+    private void jb_votopresidenteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_votopresidenteMouseClicked
+        // TODO add your handling code here:
+        
+        if(this.jt_presidente.getSelectedRow()>=0){
+            DefaultTableModel modelo = (DefaultTableModel)jt_presidente.getModel();
+            Persona p = new Persona();
+            for(Persona tem : candidatos){
+                if(modelo.getValueAt(jt_presidente.getSelectedRow(), 0).equals(tem.getId())){
+                    ((Presidente)tem).setVotos(((Presidente)tem).getVotos()+1);
+                    
+                    this.jb_votopresidente.setEnabled(false);
+                }
+            }
+        }
+    }//GEN-LAST:event_jb_votopresidenteMouseClicked
+
+    private void jb_votodiputadaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_votodiputadaMouseClicked
+        // TODO add your handling code here:
+        
+        if(this.jt_diputado.getSelectedRow()>=0){
+            DefaultTableModel modelo = (DefaultTableModel)jt_diputado.getModel();
+            Persona p = new Persona();
+            for(Persona tem : candidatos){
+                if(modelo.getValueAt(jt_diputado.getSelectedRow(), 0).equals(tem.getId())){
+                    ((Candidato)tem).setVotos(((Candidato)tem).getVotos()+1);
+                    
+                    this.jb_votodiputada.setEnabled(false);
+                }
+            }
+        }
+    }//GEN-LAST:event_jb_votodiputadaMouseClicked
+
+    private void jb_votoalcaldeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_votoalcaldeMouseClicked
+        // TODO add your handling code here:
+        
+        if(this.jt_alcalde.getSelectedRow()>=0){
+            DefaultTableModel modelo = (DefaultTableModel)jt_alcalde.getModel();
+            Persona p = new Persona();
+            for(Persona tem : candidatos){
+                if(modelo.getValueAt(jt_alcalde.getSelectedRow(), 0).equals(tem.getId())){
+                    ((Candidato)tem).setVotos(((Candidato)tem).getVotos()+1);
+                    
+                    this.jb_votoalcalde.setEnabled(false);
+                }
+            }
+        }
+    }//GEN-LAST:event_jb_votoalcaldeMouseClicked
+
+    private void jButton12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton12MouseClicked
+        // TODO add your handling code here:
+        this.jd_votacion.setVisible(false);
+    }//GEN-LAST:event_jButton12MouseClicked
 
     private void jButton14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton14MouseClicked
         // TODO add your handling code here:
-        presidentes.add((Presidente)this.cb_presidente.getSelectedItem());
+        jt_ganadordiputado.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Municipio", "Nombre"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jt_ganadoresalcalde.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Municipio", "Nombre"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        for(Persona tem : candidatos){
+            Diputado ganadorD = new Diputado();
+            if (tem instanceof Diputado) {
+                for (Persona t : candidatos) {
+                    if(t instanceof Diputado){
+                        if (((Diputado) tem).getDepartamento().equalsIgnoreCase(((Diputado) t).getDepartamento())) {
+                            if (((Diputado) tem).getVotos() > ganadorD.getVotos()) {
+                                ganadorD = (Diputado) tem;
+                            }
+                        }
+                    }
+                }
+                if (!this.diputadosGanadores.contains(ganadorD)) {
+                    this.diputadosGanadores.add(ganadorD);
+                }
+            }
+        }
+        for(Persona tem : candidatos){
+            Alcalde ganadorA = new Alcalde();
+            if (tem instanceof Alcalde) {
+                for (Persona t : candidatos) {
+                    if(t instanceof Alcalde){
+                        if (((Alcalde) tem).getMunicipio().equalsIgnoreCase(((Alcalde) t).getMunicipio())) {
+                            if (((Alcalde) tem).getVotos() > ganadorA.getVotos()) {
+                                ganadorA = (Alcalde) tem;
+                            }
+                        }
+                    }
+                }
+                if (!this.alcaldesGanadores.contains(ganadorA)) {
+                    this.alcaldesGanadores.add(ganadorA);
+                }
+            }
+        }
+        Presidente ganadorP = new Presidente();
+        for(Persona tem : candidatos){
+            if(tem instanceof Presidente){
+                if(ganadorP.getVotos() < ((Presidente) tem).getVotos()){
+                    ganadorP = (Presidente)tem;
+                }
+            }
+        }
+        for(Diputado tem : this.diputadosGanadores){
+        Diputado s = (Diputado) tem;
+           Object[] newrow = {s.getDepartamento(),s.getNombre()};
+           DefaultTableModel modelo = (DefaultTableModel)this.jt_ganadordiputado.getModel();
+           modelo.addRow(newrow);
+           this.jt_ganadordiputado.setModel(modelo);
+        }
+        for(Alcalde tem : this.alcaldesGanadores){
+        Alcalde s = (Alcalde) tem;
+           Object[] newrow = {s.getMunicipio(),s.getNombre()};
+           DefaultTableModel modelo = (DefaultTableModel)this.jt_ganadoresalcalde.getModel();
+           modelo.addRow(newrow);
+           this.jt_ganadoresalcalde.setModel(modelo);
+        }
+        this.tf_presidenteganador.setText(ganadorP.getNombre());
+        this.jd_ganador.setModal(true);
+        this.jd_ganador.pack();
+        this.jd_ganador.setLocationRelativeTo(this);
+        this.jd_ganador.setVisible(true);
     }//GEN-LAST:event_jButton14MouseClicked
+
+    private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
+        // TODO add your handling code here:
+        String mostrar="";
+        for(Persona tem : candidatos){
+            mostrar+= candidatos.indexOf(tem) +" : "+ tem.getNombre() +"\n";
+        }
+        int x = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la posicion a modificar\n"+mostrar));
+        String nuevo_nombre = JOptionPane.showInputDialog("Ingrese el nuevo nombre");
+        candidatos.get(x).setNombre(nuevo_nombre);
+    }//GEN-LAST:event_jButton8MouseClicked
 
     /**
      * @param args the command line arguments
@@ -958,8 +1817,11 @@ public class Main_Tab extends javax.swing.JFrame {
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -988,6 +1850,8 @@ public class Main_Tab extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -996,6 +1860,13 @@ public class Main_Tab extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel15;
+    private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -1003,13 +1874,42 @@ public class Main_Tab extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JTabbedPane jTabbedPane3;
+    private javax.swing.JTabbedPane jTabbedPane4;
+    private javax.swing.JTabbedPane jTabbedPane5;
     private javax.swing.JTable jTable1;
+    private javax.swing.JButton jb_alcalde;
+    private javax.swing.JButton jb_diputado;
+    private javax.swing.JButton jb_presidente;
+    private javax.swing.JButton jb_votoalcalde;
+    private javax.swing.JButton jb_votodiputada;
+    private javax.swing.JButton jb_votopresidente;
     private javax.swing.JDialog jd_eliminar;
+    private javax.swing.JDialog jd_ganador;
+    private javax.swing.JDialog jd_listar;
+    private javax.swing.JDialog jd_modificar;
     private javax.swing.JDialog jd_partido;
     private javax.swing.JDialog jd_personas;
+    private javax.swing.JDialog jd_votacion;
+    private javax.swing.JDialog jd_votar;
+    private javax.swing.JTable jt_alcalde;
+    private javax.swing.JTable jt_diputado;
+    private javax.swing.JTable jt_ganadordiputado;
+    private javax.swing.JTable jt_ganadoresalcalde;
+    private javax.swing.JTable jt_partidos;
+    private javax.swing.JTable jt_personas;
+    private javax.swing.JTable jt_presidente;
     private javax.swing.JTextField tf_departamento;
     private javax.swing.JTextField tf_departamento3;
     private javax.swing.JTextField tf_edad;
@@ -1020,6 +1920,7 @@ public class Main_Tab extends javax.swing.JFrame {
     private javax.swing.JTextField tf_id1;
     private javax.swing.JTextField tf_id2;
     private javax.swing.JTextField tf_id3;
+    private javax.swing.JTextField tf_idvoto;
     private javax.swing.JTextField tf_movimiento;
     private javax.swing.JTextField tf_municipio;
     private javax.swing.JTextField tf_municipio2;
@@ -1029,6 +1930,7 @@ public class Main_Tab extends javax.swing.JFrame {
     private javax.swing.JTextField tf_nombre3;
     private javax.swing.JTextField tf_nombre_partido;
     private javax.swing.JTextField tf_pais;
+    private javax.swing.JTextField tf_presidenteganador;
     private javax.swing.JTextField tf_salario;
     private javax.swing.JTextField tf_salario2;
     private javax.swing.JTextField tf_salario3;
@@ -1038,4 +1940,8 @@ public class Main_Tab extends javax.swing.JFrame {
     ArrayList<Presidente>presidentes = new ArrayList();
     ArrayList<Diputado>diputados = new ArrayList();
     ArrayList<Alcalde>alcaldes = new ArrayList();
+    ArrayList<Diputado>diputadosGanadores = new ArrayList();
+    ArrayList<Alcalde>alcaldesGanadores = new ArrayList();
+    
+    
 }
